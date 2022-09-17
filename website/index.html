@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<head>
+
+    <title>Karlıca Doğal Kaynak Suyu | Mardin</title>
+    <meta charset = "UTF-8" />
+    <script src = "https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <style>
+        body{
+            background-color: black;
+            padding: "0px";
+            margin: "0px";
+        }
+        #innerheader{
+            width: 80%;
+            height: 50px;
+            border: 1px solid white;
+            margin: auto;
+            color: white;
+        }
+        #header{
+            margin: auto;
+            color: "white";
+            width: "100%";
+            
+        }
+        #logo{
+            /*border: 1px solid white;*/
+            height: 50px;
+            width: 25%;
+            float: left;
+        }
+        .navbar{
+            /*border: 1px solid white;*/
+            height: 50px;
+            margin: 0px;
+            padding: 0px;
+        }
+        .navbar li{
+            width: 15%;
+            height: 50px;
+            /*border: 1px solid white;*/
+            float: left;
+            list-style: none;
+        }
+        .navbar li a{
+            display: block;
+            height: 50px;
+            border: 1px solid white;
+            text-decoration: none;
+            color: white;
+        }
+        #genisletme{
+            height: 2000px;
+        }
+    </style>
+</head>
+
+
+
+<body>
+    
+    <div id = "header" class="header">
+        <div id = "innerheader">
+            <div id = "logo"><center>LOGO</center></div>
+            <ul class="navbar">
+                <li><a href="#"><center>GİRİŞ</center></a></li>
+                <li><a href="#"><center>HAKKIMIZDA</center></a></li>
+                <li><a href="#"><center>ÜRÜNLERİMİZ</center></a></li>
+                <li><a href="#"><center>TEKNOLOJİMİZ</center></a></li>
+                <li><a href="#"><center>İLETİŞİM</center></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="genisletme">genişletme</div>
+
+    <script>
+        var width_screen = screen.width;
+        console.log(width_screen);
+        $('#header').css({
+            height: "50px",
+            border: "1px solid white"
+        });
+    </script>
+
+</body>
+
+
+</html>
