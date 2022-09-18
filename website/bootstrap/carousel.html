@@ -5,6 +5,10 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.101.0">
+    <script
+  src="https://code.jquery.com/jquery-3.6.1.min.js"
+  integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+  crossorigin="anonymous"></script>
     <title>CAROUSEL</title>
 
 <link href="https://getbootstrap.com/docs/5.2/dist/css/bootstrap.min.css" rel="stylesheet" 
@@ -15,6 +19,10 @@ integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+f
     <style>
         body {
          padding-bottom: 20px;
+        }
+
+        html {
+          scroll-behavior: smooth;
         }
 
         .navbar {
@@ -71,9 +79,51 @@ integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+f
         white-space: nowrap;
         -webkit-overflow-scrolling: touch;
       }
-      main{
+
+      main {
         margin-top: 100px;
       }
+
+      svg:not(:root) {
+        overflow: visible;
+      }
+
+      .carousel-control-next, .carousel-control-prev{
+        color: black;
+      }
+
+      :root {
+        --bs-border-color: #000;
+      }
+
+      .carousel-control-next-icon {
+        background-image: url(next.png);
+      }
+
+      .carousel-control-prev-icon {
+        background-image: url(previous.png);
+      }
+
+      #myCarousel{
+        padding-top: 55px;
+      }
+      
+      .urunler{
+        padding-top: 130px;
+      }
+      
+      .navbar{
+        box-shadow: 0 0 20px #000;
+      }
+      .btn-bgrnd{
+        background-color: #000;
+      }
+      /*
+      .carousel-indicators{
+        background-color: #000;
+      }
+      */
+
     </style>
 
     
@@ -85,20 +135,26 @@ integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+f
 <header>
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Carousel</a>
+      <a class="navbar-brand" href="#"><img src="logo.png" alt="Karlıca Doğal Kaynak Suyu | Mardin"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav me-auto mb-2 mb-md-0"> 
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link active" aria-current="page" href="#">Anasayfa</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a class="nav-link animateLink" href="#urunlerimiz">Ürünlerimiz</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link disabled">Disabled</a>
+            <a class="nav-link animateLink" href="#hakkimizda">Hakkımızda</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link animateLink" href="#">Teknolojimiz</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link animateLink" href="#">İletişim</a>
           </li>
         </ul>
       </div>
@@ -109,42 +165,39 @@ integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+f
 <main>
 
   <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <div class="carousel-indicators urunlerimiz" id="urunlerimiz">
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="btn-bgrnd active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" class="btn-bgrnd" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" class="btn-bgrnd" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
     </div>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
+        <center><img src="example.png" id="slider-resim" alt=""></center>
 
         <div class="container">
           <div class="carousel-caption text-start">
-            <h1>Example headline.</h1>
-            <p>Some representative placeholder content for the first slide of the carousel.</p>
-            <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
+            
+            <!--<h1>Example headline.</h1>-->
+            <!--<p>Some representative placeholder content for the first slide of the carousel.</p>-->
+            <!--<p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>-->
           </div>
         </div>
       </div>
       <div class="carousel-item">
-        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
+        <center><img src="example.jpg" alt=""></center>
 
         <div class="container">
           <div class="carousel-caption">
-            <h1>Another example headline.</h1>
-            <p>Some representative placeholder content for the second slide of the carousel.</p>
-            <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
+
           </div>
         </div>
       </div>
       <div class="carousel-item">
-        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
+        <center><img src="example.jpg" alt=""></center>
 
         <div class="container">
-          <div class="carousel-caption text-end">
-            <h1>One more for good measure.</h1>
-            <p>Some representative placeholder content for the third slide of this carousel.</p>
-            <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
+          <div class="carousel-caption">
+            
           </div>
         </div>
       </div>
@@ -164,32 +217,74 @@ integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+f
   ================================================== -->
   <!-- Wrap the rest of the page in another container to center all the content. -->
 
-  <div class="container marketing">
+  <div class="container marketing urunler">
 
     <!-- Three columns of text below the carousel -->
     <div class="row">
       <div class="col-lg-4">
-        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+        <center>
+        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>200 CC</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+        </center>
 
-        <h2 class="fw-normal">Heading</h2>
-        <p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p>
-        <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+        <center>
+        <h2 class="fw-normal">200 CC</h2>
+        </center>
+
+        <center>
+        <p>Pet Bardak Su</p>
+        </center>
+        
+        <!--<p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>-->
       </div><!-- /.col-lg-4 -->
       <div class="col-lg-4">
-        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+        <center>
+          <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>0.5 LT</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+        </center>
+        
+        
+        <center>
+          <h2 class="fw-normal">0.5 LT</h2>
+        </center>
+        
+        <center>        
+          <p>Pet Şişe Su</p>
+        </center>
 
-        <h2 class="fw-normal">Heading</h2>
-        <p>Another exciting bit of representative placeholder content. This time, we've moved on to the second column.</p>
-        <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+
+        
       </div><!-- /.col-lg-4 -->
       <div class="col-lg-4">
-        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-
-        <h2 class="fw-normal">Heading</h2>
-        <p>And lastly this, the third column of representative placeholder content.</p>
-        <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+        <center>
+          <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>1.5 LT</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+        </center>
+        
+        
+        <center>
+          <h2 class="fw-normal">1.5 LT</h2>
+        </center>
+        
+        <center>        
+          <p>Pet Şişe Su</p>
+        </center>
       </div><!-- /.col-lg-4 -->
-    </div><!-- /.row -->
+
+      
+      <center>
+      <div class="col-lg-4">
+        <center>
+          <svg class="bd-placeholder-img rounded-circle hakkimizda" id="hakkimizda" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>19 LT</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+        </center>
+        
+        
+        <center>
+          <h2 class="fw-normal">19 LT</h2>
+        </center>
+        
+        <center>        
+          <p>Damacana Su</p>
+        </center>
+      </div><!-- /.col-lg-4 -->
+    </div><!-- /.row --></center>
 
 
     <!-- START THE FEATURETTES -->
@@ -243,13 +338,45 @@ integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+f
   <!-- FOOTER -->
   <footer class="container">
     <p class="float-end"><a href="#">Back to top</a></p>
-    <p>&copy; 2017–2022 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+    <p>&copy; 2017–2022 Company, Inc. &middot; <a href="#bottom">Privacy</a> &middot; <a href="#">Terms</a></p>
   </footer>
 </main>
 
 
-    <script src="https://getbootstrap.com/docs/5.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <script src="https://getbootstrap.com/docs/5.2/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" 
+    crossorigin="anonymous"></script>
 
+    <script>
+
+      $(document).ready(function(){
+        
+        $('animateLink').click(function(){
+          $('html,body').animate({scrollTop: 0},700);
+          return false;
+        });
+        var katsayi = 2000 / screen.width;
+        console.log(katsayi + " " + screen.width);
+        var yukseklik = 0;
+        var genislik = screen.width;
+        if (katsayi < 1) {
+          yukseklik = 400 * katsayi;
+        } else {
+          yukseklik = 400 / katsayi;
+        }
+        yukseklik = yukseklik.toString();
+        genislik = genislik.toString();
+        console.log(typeof(yukseklik))
+        console.log(typeof(genislik))
+        var resim_css = {
+          width: yukseklik,
+          height: genislik
+        }
+        $('slider-resim').css(resim_css);
+
+
+      });
       
+    </script>
   </body>
 </html>
