@@ -5,11 +5,20 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.101.0">
+    <title>CAROUSEL</title>
     <script
   src="https://code.jquery.com/jquery-3.6.1.min.js"
   integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
   crossorigin="anonymous"></script>
-    <title>CAROUSEL</title>
+
+  <script src="https://getbootstrap.com/docs/5.2/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" 
+    crossorigin="anonymous"></script>
+    
+  <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+
+
+
 
 <link href="https://getbootstrap.com/docs/5.2/dist/css/bootstrap.min.css" rel="stylesheet" 
 integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
@@ -27,6 +36,7 @@ integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+f
 
         .navbar {
         margin-bottom: 20px;
+        background-color: #000;
         }
 
       .bd-placeholder-img {
@@ -80,9 +90,7 @@ integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+f
         -webkit-overflow-scrolling: touch;
       }
 
-      main {
-        margin-top: 100px;
-      }
+      
 
       svg:not(:root) {
         overflow: visible;
@@ -98,31 +106,56 @@ integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+f
 
       .carousel-control-next-icon {
         background-image: url(next.png);
+        margin-top: 50px;
       }
 
       .carousel-control-prev-icon {
         background-image: url(previous.png);
+        margin-top: 50px;
       }
 
       #myCarousel{
-        padding-top: 55px;
+        padding-top: 0px;
       }
       
       .urunler{
         padding-top: 130px;
       }
       
-      .navbar{
-        box-shadow: 0 0 20px #000;
-      }
-      .btn-bgrnd{
-        background-color: #000;
-      }
       /*
-      .carousel-indicators{
-        background-color: #000;
+      .navbar{
+        box-shadow: 0 0 20px #000; 
       }
       */
+
+      .carousel-indicators [data-bs-target] {
+        background-color: #000;
+      }
+
+      .bg-dark {
+        --bs-bg-opacity: 1;
+        background-color: rgba(var(--bs-success-rgb),var(--bs-bg-opacity))!important;
+      }
+      #logo_resim{
+        margin-left: 100px;
+      }
+      main{
+        margin-top: 90px;
+      }
+      .nav-item:hover{
+        border-bottom: 2px dashed #00597D;
+        
+      }
+      .nav-item{
+        border-bottom: 2px solid rgb(25, 135, 84);
+        padding-bottom: 10px;
+        -webkit-transition: all .4s;
+	      -moz-transition: all .4s;
+	      transition: all .4s;
+      }
+      .baslik{
+        color: #000;
+      }
 
     </style>
 
@@ -133,16 +166,18 @@ integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+f
   <body>
     
 <header>
-  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#"><img src="logo.png" alt="Karlıca Doğal Kaynak Suyu | Mardin"></a>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" id="navbar_id">
+    <div class="container-fluid" id="fluid">
+      <a class="navbar-brand" href="#">
+        <img src="logo.png" id="logo_resim" width="140px" height="129px" alt="Karlıca Doğal Kaynak Suyu | Mardin">
+      </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav me-auto mb-2 mb-md-0"> 
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Anasayfa</a>
+            <a class="nav-link active anasayfaClass" aria-current="page" href="#">Anasayfa</a>
           </li>
           <li class="nav-item">
             <a class="nav-link animateLink" href="#urunlerimiz">Ürünlerimiz</a>
@@ -172,19 +207,19 @@ integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+f
     </div>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <center><img src="example.png" id="slider-resim" alt=""></center>
+        <center><img src="1.png" id="slider-resim1" alt=""></center>
 
         <div class="container">
           <div class="carousel-caption text-start">
             
-            <!--<h1>Example headline.</h1>-->
+            <h1 class="baslik">DOĞAYLA İÇ İÇE!</h1>
             <!--<p>Some representative placeholder content for the first slide of the carousel.</p>-->
             <!--<p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>-->
           </div>
         </div>
       </div>
       <div class="carousel-item">
-        <center><img src="example.jpg" alt=""></center>
+        <center><img src="2.png" id="slider-resim2" alt=""></center>
 
         <div class="container">
           <div class="carousel-caption">
@@ -193,7 +228,7 @@ integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+f
         </div>
       </div>
       <div class="carousel-item">
-        <center><img src="example.jpg" alt=""></center>
+        <center><img src="3.png" id="slider-resim3" alt=""></center>
 
         <div class="container">
           <div class="carousel-caption">
@@ -272,12 +307,12 @@ integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+f
       <center>
       <div class="col-lg-4">
         <center>
-          <svg class="bd-placeholder-img rounded-circle hakkimizda" id="hakkimizda" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>19 LT</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+          <svg class="bd-placeholder-img rounded-circle hakkimizda" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>19 LT</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
         </center>
         
         
         <center>
-          <h2 class="fw-normal">19 LT</h2>
+          <h2 class="fw-normal" id="hakkimizda">19 LT</h2>
         </center>
         
         <center>        
@@ -343,10 +378,6 @@ integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+f
 </main>
 
 
-    <script src="https://getbootstrap.com/docs/5.2/dist/js/bootstrap.bundle.min.js" 
-    integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" 
-    crossorigin="anonymous"></script>
-
     <script>
 
       $(document).ready(function(){
@@ -355,28 +386,88 @@ integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+f
           $('html,body').animate({scrollTop: 0},700);
           return false;
         });
-        var katsayi = 2000 / screen.width;
-        console.log(katsayi + " " + screen.width);
-        var yukseklik = 0;
-        var genislik = screen.width;
-        if (katsayi < 1) {
-          yukseklik = 400 * katsayi;
-        } else {
-          yukseklik = 400 / katsayi;
+        
+        function slider_resize() {
+            var katsayi = screen.width / 2000;
+            console.log(katsayi + " " + screen.width);
+            var yukseklik = 0;
+            var genislik = screen.width;
+            var genislik_int = screen.width;
+            if (katsayi < 1) {
+              yukseklik = 900 * katsayi;
+            } else {
+              yukseklik = 900 / katsayi;
+            }
+            yukseklik = yukseklik.toString();
+            genislik = genislik.toString();
+            yukseklik += "px";
+            genislik += "px";
+            console.log(yukseklik+" "+genislik);
+            document.getElementById("slider-resim1").style.width = genislik;
+            document.getElementById("slider-resim1").style.height = yukseklik;
+
+            document.getElementById("slider-resim2").style.width = genislik;
+            document.getElementById("slider-resim2").style.height = yukseklik;
+
+            document.getElementById("slider-resim3").style.width = genislik;
+            document.getElementById("slider-resim3").style.height = yukseklik;
         }
-        yukseklik = yukseklik.toString();
-        genislik = genislik.toString();
-        console.log(typeof(yukseklik))
-        console.log(typeof(genislik))
-        var resim_css = {
-          width: yukseklik,
-          height: genislik
+
+        function func() {
+          if (screen.width > 767) {
+            slider_resize();
+
+            if (scrollY != 0) {
+              $('#logo_resim').animate({
+                width: '70px',
+                height: '65px'
+              });
+              $('#fluid').animate({
+                opacity: "1"
+              })
+            }
+            else {
+              $('#logo_resim').animate({
+                width: "140px",
+                height: "129px"
+              });
+              document.getElementById("navbar_id").style.boxShadow = "0px 0px 0px #000";
+            }
+          }
+          else {
+            $(".nav-item").click(function() {
+              $(".navbar-toggler").click();
+            });
+            $('#logo_resim').animate({
+                width: '70px',
+                height: '65px'
+              });
+              slider_resize();
+          }
+
         }
-        $('slider-resim').css(resim_css);
+
+        setInterval(func, 1000);
+
+        
+
+
+
+
+
+
 
 
       });
+
+      window.sr = new ScrollReveal();
+
+      sr.reveal('.carousel', {
+        delay: 1000
+      });
+
       
     </script>
   </body>
 </html>
+
