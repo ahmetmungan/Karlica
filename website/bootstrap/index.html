@@ -23,6 +23,8 @@
 <link href="https://getbootstrap.com/docs/5.2/dist/css/bootstrap.min.css" rel="stylesheet" 
 integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 
+<link href="https://getbootstrap.com/docs/5.2/examples/carousel/carousel.css">
+
  <meta name="theme-color" content="#712cf9">
 
     <style>
@@ -96,7 +98,7 @@ integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+f
         overflow: visible;
       }
 
-      .carousel-control-next, .carousel-control-prev{
+      .carousel-control-next, .carousel-control-prev {
         color: black;
       }
 
@@ -114,11 +116,11 @@ integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+f
         margin-top: 50px;
       }
 
-      #myCarousel{
+      #myCarousel {
         padding-top: 0px;
       }
       
-      .urunler{
+      .urunler {
         padding-top: 130px;
       }
       
@@ -136,53 +138,74 @@ integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+f
         --bs-bg-opacity: 1;
         background-color: rgba(var(--bs-success-rgb),var(--bs-bg-opacity))!important;
       }
-      #logo_resim{
+      #logo_resim {
         margin-left: 100px;
       }
-      main{
+      main {
         margin-top: 90px;
       }
-      .nav-item:hover{
+      .nav-item:hover {
         border-bottom: 2px dashed #00597D;
         
       }
-      .nav-item{
+      .nav-item {
         border-bottom: 2px solid rgb(25, 135, 84);
         padding-bottom: 10px;
         -webkit-transition: all .4s;
 	      -moz-transition: all .4s;
 	      transition: all .4s;
       }
-      .baslik{
+      .baslik {
         color: #000;
       }
-      .lead{
+      .lead {
         text-align: justify;
       }
-      .hakkimizda_dot1{
+      .hakkimizda_dot1 {
+        
+        color: #98c32a;
+      }
+      .hakkimizda_dot2 {
         color: #00597d;
       }
-      .hakkimizda_dot2{
-        color: #2ac398;
+      .hakkimizda_dot3 {
+        color: #f49700;
       }
-      .hakkimizda_dot3{
-        color: #0097f4;
-      }
-      .teknolojimiz_hr{
+      .teknolojimiz_hr {
         padding-top: 110px;
-        opacity: 1;
       }
-      #iletisim{
+      #iletisim {
         opacity: 0;
       }
-      
-      
+      ::-webkit-scrollbar {
+        width: 10px;
+        background-color: #198754;
+      }
+      ::-webkit-scrollbar-thumb {
+        background-color: #f49700;
+        border: 2px solid #00597d;
+        border-radius: 20px;
+      }
+      .featurette-heading {
+        margin-bottom: 30px;
+      }
+      .tablo {
+        width: 100%;
+        height: 100px;
+        padding: 0px;
+      }
+      .tablo_ic {
+        width: 50%;
+      }
+      .map_column {
+        height: 480px;
+      }
 
     </style>
 
     
     <!-- Custom styles for this template -->
-    <link href="https://getbootstrap.com/docs/5.2/examples/carousel/carousel.css">
+    
   </head>
   <body>
     
@@ -279,7 +302,10 @@ integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+f
     <div class="row">
       <div class="col-lg-4">
         <center>
-        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>200 CC</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" 
+        role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false">
+        <title>200 CC</title>
+        <rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#000" dy=".3em">140x140</text></svg>
         </center>
 
         <center>
@@ -400,51 +426,56 @@ integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+f
     <hr class="featurette-divider teknolojimiz_hr" id="teknolojimiz">
 
     <div class="row featurette">
-      <div class="col-md-7">
-        <h2 class="featurette-heading fw-normal lh-1">TEKNOLOJİMİZ <font class="hakkimizda_dot3">●</font> <span class="text-muted">BLANK</span></h2>
+      <div class="col-md-12">
+        <h2 class="featurette-heading fw-normal lh-1"><center>
+          <font class="hakkimizda_dot1">●</font><font class="hakkimizda_dot2">●</font><font class="hakkimizda_dot3">● </font> TEKNOLOJİMİZ 
+          <font class="hakkimizda_dot3">●</font><font class="hakkimizda_dot2">●</font><font class="hakkimizda_dot1">● </font>
+        </center>
+          </h2>
         
-        <p class="lead">Hayatın vazgeçilmez ihtiyacı olan suyu; sağlıklı bir şekilde üretmek, tarihi birikimimizi geleceğe taşıyarak su kültürünün gelişimine ve yaşam kalitesinin artmasına katkıda bulunmak.
-          Türkiye'deki su sektöründe tekelleşmeyi ve haksız rekabeti önlemektir.
-          <p class="lead"><b>Karlıca Doğal Kaynak Suyu</b> yönetimi <b>Karlıca Doğal Kaynak Suyu</b> Pazarlama Departmanı tarafından yürütülmektedir. 
-            Ulusal ve uluslararası pazarlarda marka değerinin geliştirilmesi temel amacıyla sürdürülen pazarlama politikaları ve bunların bağlı olduğu stratejilere paralel olarak takip edilmektedir.</p> 
+        <p class="lead">
+        <p class="lead"><b>GIDA KODEKSİNE UYGUNLUK, SUYUN KALİTESİ VE SERTLİK DERECESİ, DEPOLANMASI, DİNLENDİRİLMESİ</b></p>
+        <p class="lead">Türkiye'de Gıda Kodeksi standartları zaman zaman değişmektedir. 
+          Bu durum, Avrupa ve Amerika´da olduğu gibi standartların tam olarak oturtulmadığının bir göstergesi olmakla birlikte, gelişim olduğunu da göstermektedir.</p>
+        <p class="lead">Suların depolanması ve dinlendirilmesi, suda hiçbir şekilde olumsuz etki bırakmayan, krom-çelik depolarda yapılmaktadır. 
+          <b>Karlıca Doğal Kaynak Suyu</b>'nun toplandığı ham su depolarına sürekli fiziksel, kimyasal ve biyolojik dezenfeksiyon yapılmaktadır.</p>
+        <p class="lead">Suyun içim kalitesi, içindeki minerallerin dengeli olmasına bağlıdır. 
+          Genellikle vücut için, içimi iyi olan sular 4-6 sertlikte ve mineral dengesi iyi olan sulardır. 
+          1-2 sertlik derecesinde bulunan sular, vücut için yeterli mineral dengesi olmadığı için kaliteli sular değildir.</p>
+        <p class="lead"><b>SUDAKİ OZONLAMA MİKTARI, SAĞLIK AÇISINDAN UYULMASI GEREKEN KURALLAR</b></p>
+        <p class="lead">Sudaki ozon miktarı, tek ozon ölçümü sistemi olan İndigo Kolorimetrik yöntemle ölçülmektedir. 
+          Sularda, bakteri ve virüsleri öldürmek için Dünya Sağlık Örgütü'nün önerdiği miktar, 0,4 mg/lt'dir ve 5 dakika temas süresi gereklidir. 
+          Normal olarak insan burnu 0,2-0,3 mg/lt ozon miktarını algılayabilir.</p>
+        <p class="lead">Ayrıca suyun ve ambalajların dezenfeksiyonunda doğal kaynak sularını etkileyebilecek hiçbir katkı maddesi kullanılmaması gereklidir. 
+          Karlıca, ozonlama tesisleriyle dezenfeksiyon işlemi gerçekleştirmektedir.</p>
+        <p class="lead"><b>KULLANILAN DAMACANALARIN TEMİZLİĞİ VE KULLANIM MİKTARI, GERİ DÖNÜŞÜMÜ</b></p>
+        <p class="lead">Sağlık Bakanlığı yönetmeliğinde damacanaların temizliği için standartlar belirlenmiştir.</p>
+        <p class="lead"><b>Karlıca Doğal Kaynak Suları</b>'nda, damacanaların fabrikaya ulaşmasıyla birlikte, 
+          her defasında 40 C' sıcak su ve sadece polikarbon damacanaları temizleyen sabunla dış yüzey dezenfeksiyonu yapılmaktadır. 
+          Standartlar bu işlemi zorunlu tutmamakta, ambalaj ve ürün kalitesini korumak amacıyla gerçekleştirilmektedir. 
+          Daha sonra 70 C' sıcak suyla iç yüzey dezenfeksiyonu gerçekleştirilir. 
+          Dış ve iç yüzey dezenfeksiyonu gerçekleştirilen damacanalar, yüksek ozonlu su ile tekrar dezenfekte edilmekte ve dolum işlemine alınmaktadır.</p>
+        <p class="lead"><b>Karlıca Doğal Kaynak Suyu</b> tesisimizde ürünler, bayi ağı ile halka ulaştırılmakta, 
+          yine bayi ağı ile damacanaların geri dönüşümü sağlanmaktadır. 
+          Üretim tesislerine gelmeden önce damacanalar bayilerde kontrol edilmektedir.
+        </p>
+        </p> 
       
-          </div>
+      </div>
+          <!--
       <div class="col-md-5">
         <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
 
       </div>
+      -->
     </div>
 
 
-    <!--
-      SAYFA UZATMA 1
-    -->
-
-    <div class="row featurette">
-      <div class="col-md-7">
-        <h2 class="featurette-heading fw-normal lh-1">TEKNOLOJİMİZ <font class="hakkimizda_dot3">●</font> <span class="text-muted">BLANK</span></h2>
-        
-        <p class="lead">Hayatın vazgeçilmez ihtiyacı olan suyu; sağlıklı bir şekilde üretmek, tarihi birikimimizi geleceğe taşıyarak su kültürünün gelişimine ve yaşam kalitesinin artmasına katkıda bulunmak.
-          Türkiye'deki su sektöründe tekelleşmeyi ve haksız rekabeti önlemektir.
-          <p class="lead"><b>Karlıca Doğal Kaynak Suyu</b> yönetimi <b>Karlıca Doğal Kaynak Suyu</b> Pazarlama Departmanı tarafından yürütülmektedir. 
-            Ulusal ve uluslararası pazarlarda marka değerinin geliştirilmesi temel amacıyla sürdürülen pazarlama politikaları ve bunların bağlı olduğu stratejilere paralel olarak takip edilmektedir.</p> 
-       
-          </div>
-      <div class="col-md-5">
-        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
-
-      </div>
-    </div>
-
-
-    <!--
-      SAYFA UZATMA 2
-    -->
 
     <hr class="featurette-divider teknolojimiz_hr" id="iletisim">
 
-    <div class="row featurette" style="margin-bottom: 200px;">
-      <div class="col-md-7">
+    <div class="row featurette" style="margin-bottom: 40px;">
+      <div class="col-md-12">
         <h2 class="featurette-heading fw-normal lh-1">İLETİŞİM</h2>
         
         <p class="lead">Hayatın vazgeçilmez ihtiyacı olan suyu; sağlıklı bir şekilde üretmek, tarihi birikimimizi geleceğe taşıyarak su kültürünün gelişimine ve yaşam kalitesinin artmasına katkıda bulunmak.
@@ -453,25 +484,57 @@ integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+f
             Ulusal ve uluslararası pazarlarda marka değerinin geliştirilmesi temel amacıyla sürdürülen pazarlama politikaları ve bunların bağlı olduğu stratejilere paralel olarak takip edilmektedir.</p> 
        
           </div>
-      <div class="col-md-5" style="border: 2px solid #000;">
-        <center style="font-size: 30px;">GOOGLE MAP API 500x500</center>
-        <!--<svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
-        -->
-      </div>
     </div>
 
+    <!--MAPS API'LERİ-->
+    <div class="maps_class">
+      <table class="tablo">
+        <tr>
+          <td class="tablo_ic">
+            <h2 class="featurette-heading fw-normal lh-1" style="text-align: center; margin-bottom: 0px;"> <img src="google_maps.png" alt="" width="40px" height="40px">GOOGLE MAPS KONUM</h2>
+          </td>
+          <td class="tablo_ic">
+            <h2 class="featurette-heading fw-normal lh-1" style="text-align: center; margin-bottom: 0px;"> <img src="yandex_maps.png" alt="" width="40px" height="40px">YANDEX MAPS KONUM</h2>
+          </td>
+        </tr>
+        <tr>
+          <td class="tablo_ic map_column">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26389.296243637233!2d40.76386359229679!3d37.293910015060035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x400a8813609a589f%3A0x952fbaccf7696e06!2sKarl%C4%B1ca%20Do%C4%9Fal%20Kaynak%20Su%20Tesisleri!5e0!3m2!1str!2str!4v1663765494408!5m2!1str!2str" 
+      width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </td>
+          <td class="tablo_ic map_column">
+            <iframe src="https://yandex.com/map-widget/v1/?um=constructor%3Ac827deb89282728e74a442b6ac80ba266a434831f14302ea9366f5424170fb75&amp;source=constructor" 
+  width="100%" height="500" frameborder="0"></iframe>
+          </td>
+        </tr>
+      </table>
+    </div>
 
     <!-- /END THE FEATURETTES -->
 
   </div><!-- /.container -->
 
 
-  <!-- FOOTER 2017–2022-->
-  <footer class="container">
-    <p class="float-end"><a href="#">Sayfanın Başına Dön</a></p>
-    <p>&copy;2022 Karlıca Doğal Kaynak Suyu &middot; <a href="#bottom">Gizlilik Sözleşmeleri</a> &middot; <a href="#">KVKK</a></p>
-  </footer>
+
+
+
 </main>
+
+
+
+
+
+
+
+
+ 
+
+
+ <!-- FOOTER 2017–2022-->
+ <footer class="container">
+  <p class="float-end"><a href="#">Sayfanın Başına Dön</a></p>
+  <p>&copy;2022 Karlıca Doğal Kaynak Suyu &middot; <a href="#bottom">Gizlilik Sözleşmeleri</a> &middot; <a href="#">KVKK</a></p>
+</footer>
 
 
     <script>
@@ -485,7 +548,6 @@ integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+f
         
         function slider_resize() {
             var katsayi = screen.width / 2000;
-            console.log(katsayi + " " + screen.width);
             var yukseklik = 0;
             var genislik = screen.width;
             var genislik_int = screen.width;
@@ -498,7 +560,6 @@ integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+f
             genislik = genislik.toString();
             yukseklik += "px";
             genislik += "px";
-            console.log(yukseklik+" "+genislik);
             document.getElementById("slider-resim1").style.width = genislik;
             document.getElementById("slider-resim1").style.height = yukseklik;
 
@@ -518,14 +579,14 @@ integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+f
                 width: '70px',
                 height: '65px'
               });
-              //document.getElementById("navbar_id").style.boxShadow = "0px 0px 10px #000";
+              document.getElementById("navbar_id").style.boxShadow = "0px 0px 10px #000";
             }
             else {
               $('#logo_resim').animate({
                 width: "140px",
                 height: "129px"
               });
-              //document.getElementById("navbar_id").style.boxShadow = "0px 0px 0px #000";
+              document.getElementById("navbar_id").style.boxShadow = "0px 0px 0px #000";
             }
           }
           else {
