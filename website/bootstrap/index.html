@@ -6,24 +6,18 @@
     <meta name="author" content="Ahmet Mungan">
     <meta name="generator" content="BLANK">
     <title>Karlıca Doğal Kaynak Suyu | Mardin</title>
-    <script
-  src="https://code.jquery.com/jquery-3.6.1.min.js"
-  integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
-  crossorigin="anonymous"></script>
 
-  <script src="https://getbootstrap.com/docs/5.2/dist/js/bootstrap.bundle.min.js" 
-    integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" 
-    crossorigin="anonymous"></script>
-    
+  <link href="https://getbootstrap.com/docs/5.2/examples/carousel/carousel.css">
   <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
-
-
-
-
+<script
+src="https://code.jquery.com/jquery-3.6.1.min.js"
+integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+crossorigin="anonymous"></script>
+<script src="https://getbootstrap.com/docs/5.2/dist/js/bootstrap.bundle.min.js" 
+  integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" 
+  crossorigin="anonymous"></script>
 <link href="https://getbootstrap.com/docs/5.2/dist/css/bootstrap.min.css" rel="stylesheet" 
 integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-
-<link href="https://getbootstrap.com/docs/5.2/examples/carousel/carousel.css">
 
  <meta name="theme-color" content="#712cf9">
 
@@ -47,6 +41,24 @@ integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+f
         -webkit-user-select: none;
         -moz-user-select: none;
         user-select: none;
+      }
+
+      .bizkimiz {
+        background-image: url("img/content/bizkimiz.png");
+      }
+
+      .vizyonumuz {
+        background-image: url("img/content/vizyonumuz.png");
+      }
+
+      .misyonumuz {
+        background-image: url("img/content/misyonumuz.png");
+      }
+
+      .col-md-5 {
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 500px;
       }
 
       @media (min-width: 768px) {
@@ -92,8 +104,6 @@ integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+f
         -webkit-overflow-scrolling: touch;
       }
 
-      
-
       svg:not(:root) {
         overflow: visible;
       }
@@ -107,12 +117,12 @@ integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+f
       }
 
       .carousel-control-next-icon {
-        background-image: url(next.png);
+        background-image: url(img/icon/next.png);
         margin-top: 50px;
       }
 
       .carousel-control-prev-icon {
-        background-image: url(previous.png);
+        background-image: url(img/icon/previous.png);
         margin-top: 50px;
       }
 
@@ -123,12 +133,6 @@ integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+f
       .urunler {
         padding-top: 130px;
       }
-      
-      /*
-      .navbar{
-        box-shadow: 0 0 20px #000; 
-      }
-      */
 
       .carousel-indicators [data-bs-target] {
         background-color: #000;
@@ -143,62 +147,121 @@ integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+f
       }
       main {
         margin-top: 90px;
+        margin-bottom: 70px;
       }
+
       .nav-item:hover {
-        border-bottom: 2px dashed #00597D;
-        
+        background-color: #00597d;
+        padding-left: 25px;
+        padding-right: 25px;
+        color: #f49700;
+      }
+      .nav-item:visited {
+        background-color: #98c32a;
+        padding-left: 20px;
+        padding-right: 20px;
       }
       .nav-item {
-        border-bottom: 2px solid rgb(25, 135, 84);
-        padding-bottom: 10px;
+        border-radius: 5px;
+        padding: 5px;
         -webkit-transition: all .4s;
 	      -moz-transition: all .4s;
 	      transition: all .4s;
       }
+
       .baslik {
         color: #000;
       }
+
       .lead {
         text-align: justify;
       }
+
       .hakkimizda_dot1 {
         
         color: #98c32a;
       }
+
       .hakkimizda_dot2 {
         color: #00597d;
       }
+
       .hakkimizda_dot3 {
         color: #f49700;
       }
+
       .teknolojimiz_hr {
         padding-top: 110px;
       }
+
       #iletisim {
         opacity: 0;
       }
+
       ::-webkit-scrollbar {
         width: 10px;
         background-color: #198754;
       }
+
       ::-webkit-scrollbar-thumb {
         background-color: #f49700;
         border: 2px solid #00597d;
         border-radius: 20px;
       }
+      
       .featurette-heading {
         margin-bottom: 30px;
       }
+
       .tablo {
         width: 100%;
         height: 100px;
         padding: 0px;
       }
+
       .tablo_ic {
         width: 50%;
       }
+
       .map_column {
         height: 480px;
+      }
+
+      .h4_altbaslik {
+        margin-bottom: 5px;
+        margin-top: 20px;
+      }
+
+      .link_button {
+        text-decoration: none;
+      }
+
+      .report_result {
+        height: 500px;
+        width: 100%;
+        color: #fff;
+      }
+
+      .report_result_row {
+        border: 1px solid #fff;
+        width: 25%;
+      }
+
+      .report_result_column1 {
+        width: 30%;
+        border-right: 1px solid #fff;
+        background-color: #f49700;;
+      }
+
+      .report_result_column2 {
+        width: 30%;
+        border-right: 1px solid #fff;
+        background-color: #00597d;
+        text-align: center;
+      }
+
+      .bardak {
+        background-image: url('img/content/bardak_k.png');
       }
 
     </style>
@@ -213,7 +276,7 @@ integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+f
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" id="navbar_id">
     <div class="container-fluid" id="fluid">
       <a class="navbar-brand" href="#">
-        <img src="logo.png" id="logo_resim" width="140px" height="129px" alt="Karlıca Doğal Kaynak Suyu | Mardin">
+        <img src="img/content/logo.png" id="logo_resim" width="140px" height="129px" alt="Karlıca Doğal Kaynak Suyu | Mardin">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -251,19 +314,16 @@ integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+f
     </div>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <center><img src="1.png" id="slider-resim1" alt=""></center>
+        <center><img src="img/slider/1.png" id="slider-resim1" alt=""></center>
 
         <div class="container">
           <div class="carousel-caption text-start">
             
-            <h1 class="baslik">ÖRNEK BAŞLIK</h1>
-            <p style="color: #000;">Örnek alt metin</p>
-            <p><a class="btn btn-lg btn-primary" href="#">Örnek Buton</a></p>
           </div>
         </div>
       </div>
       <div class="carousel-item">
-        <center><img src="2.png" id="slider-resim2" alt=""></center>
+        <center><img src="img/slider/2.png" id="slider-resim2" alt=""></center>
 
         <div class="container">
           <div class="carousel-caption">
@@ -272,7 +332,7 @@ integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+f
         </div>
       </div>
       <div class="carousel-item">
-        <center><img src="3.png" id="slider-resim3" alt=""></center>
+        <center><img src="img/slider/3.png" id="slider-resim3" alt=""></center>
 
         <div class="container">
           <div class="carousel-caption">
@@ -302,10 +362,8 @@ integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+f
     <div class="row">
       <div class="col-lg-4">
         <center>
-        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" 
-        role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false">
+        <img src="img/content/bardak_k.png" width="140" height="140" alt="200 CC">
         <title>200 CC</title>
-        <rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#000" dy=".3em">140x140</text></svg>
         </center>
 
         <center>
@@ -320,7 +378,8 @@ integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+f
       </div><!-- /.col-lg-4 -->
       <div class="col-lg-4">
         <center>
-          <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>0.5 LT</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+          <img src="img/content/05lt_k.png" width="140" height="140" alt="200 CC">
+          <title>0.5 LT</title>
         </center>
         
         
@@ -337,7 +396,8 @@ integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+f
       </div><!-- /.col-lg-4 -->
       <div class="col-lg-4">
         <center>
-          <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>1.5 LT</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+          <img src="img/content/15lt_k.png" width="140" height="140" alt="200 CC">
+          <title>1.5 LT</title>
         </center>
         
         
@@ -354,7 +414,7 @@ integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+f
       <center>
       <div class="col-lg-4">
         <center>
-          <svg class="bd-placeholder-img rounded-circle hakkimizda" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>19 LT</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+          <img src="img/content/damacana_k.png" width="140" height="140" alt="200 CC">
         </center>
         
         
@@ -375,15 +435,14 @@ integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+f
 
     <div class="row featurette">
       <div class="col-md-7">
-        <h2 class="featurette-heading fw-normal lh-1">HAKKIMIZDA <font class="hakkimizda_dot1">● </font><span class="text-muted"> Biz Kimiz?</span></h2>
+        <h2 class="featurette-heading fw-normal lh-1">HAKKIMIZDA <font class="hakkimizda_dot1">● </font><span class="text-muted" style="color: #98c32a;"> Biz Kimiz?</span></h2>
         <p class="lead"><b>Karlıca Doğal Kaynak Suyu</b> üretim tesisleri; konumu itibariyle doğu şehirlerine doğal ve kaliteli suyu ulaştırma amacını gütmektedir. 
           Bu uğurda halkın beğenisini toplamış ve her zaman kalite odaklı hizmet anlayışını benimsemiştir. 
           El değmeden ve hijyen esasıyla üretilen ürünlerin, doğa dostu olarak geri dönüştürülebilir tedarik zinciri hedeflenmektedir. 
           Yumuşak ve içimi rahat ürünlerimizi istemeyi unutmayın!</p>
       </div>
-      <div class="col-md-5">
-        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
-
+      <div class="col-md-5 bizkimiz">
+        
       </div>
     </div>
 
@@ -394,9 +453,8 @@ integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+f
         <h2 class="featurette-heading fw-normal lh-1">HAKKIMIZDA <font class="hakkimizda_dot2">●</font> <span class="text-muted"> Vizyonumuz</span></h2>
         <p class="lead">Standartlarını sürekli geliştiren, güler yüzlü ve eğitimli personel yapısı ile güven duyulan, kolektif aklı özümsemiş, müşteri memnuniyeti odaklı bir anlayış ile tüm dünyada aranan marka olmaktır.</p>
       </div>
-      <div class="col-md-5 order-md-1">
-        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
-
+      <div class="col-md-5 order-md-1 vizyonumuz">
+       
       </div>
     </div>
 
@@ -412,9 +470,8 @@ integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+f
         <p class="lead">Ulusal ve uluslararası pazarlarda marka değerinin geliştirilmesi temel amacıyla sürdürülen pazarlama politikaları ve bunların bağlı olduğu stratejilere paralel olarak takip edilmektedir.</p> 
         
       </div>
-      <div class="col-md-5">
-        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
-
+      <div class="col-md-5 misyonumuz">
+        
       </div>
     </div>
 
@@ -451,9 +508,9 @@ integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+f
         <p class="lead"><b>KULLANILAN DAMACANALARIN TEMİZLİĞİ VE KULLANIM MİKTARI, GERİ DÖNÜŞÜMÜ</b></p>
         <p class="lead">Sağlık Bakanlığı yönetmeliğinde damacanaların temizliği için standartlar belirlenmiştir.</p>
         <p class="lead"><b>Karlıca Doğal Kaynak Suları</b>'nda, damacanaların fabrikaya ulaşmasıyla birlikte, 
-          her defasında 40 C' sıcak su ve sadece polikarbon damacanaları temizleyen sabunla dış yüzey dezenfeksiyonu yapılmaktadır. 
+          her defasında 40 °C sıcak su ve sadece polikarbon damacanaları temizleyen sabunla dış yüzey dezenfeksiyonu yapılmaktadır. 
           Standartlar bu işlemi zorunlu tutmamakta, ambalaj ve ürün kalitesini korumak amacıyla gerçekleştirilmektedir. 
-          Daha sonra 70 C' sıcak suyla iç yüzey dezenfeksiyonu gerçekleştirilir. 
+          Daha sonra 70 °C sıcak suyla iç yüzey dezenfeksiyonu gerçekleştirilir. 
           Dış ve iç yüzey dezenfeksiyonu gerçekleştirilen damacanalar, yüksek ozonlu su ile tekrar dezenfekte edilmekte ve dolum işlemine alınmaktadır.</p>
         <p class="lead"><b>Karlıca Doğal Kaynak Suyu</b> tesisimizde ürünler, bayi ağı ile halka ulaştırılmakta, 
           yine bayi ağı ile damacanaların geri dönüşümü sağlanmaktadır. 
@@ -462,6 +519,68 @@ integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+f
         </p> 
       
       </div>
+      <center><p class="lead" style="text-align: center;"><b>KAYNAK ANALİZİ RAPOR SONUÇLARI</b></p></center>
+      <center>
+        <table class="report_result lead">
+          <tr class="report_result_row">
+            <td class="report_result_column1">&nbsp;PH</td>
+            <td class="report_result_column2">7,48</td>
+          </tr>
+          <tr class="report_result_row">
+            <td class="report_result_column1">&nbsp;Klorür</td>
+            <td class="report_result_column2">4,42 (mg/l)</td>
+          </tr>
+          <tr class="report_result_row">
+            <td class="report_result_column1">&nbsp;Mangan</td>
+            <td class="report_result_column2">Tespit Edilmedi</td>
+          </tr>
+          <tr class="report_result_row">
+            <td class="report_result_column1">&nbsp;Amonyum</td>
+            <td class="report_result_column2">0,253</td>
+          </tr>
+          <tr class="report_result_row">
+            <td class="report_result_column1">&nbsp;Sodyum</td>
+            <td class="report_result_column2">2,93 (mg/l)</td>
+          </tr>
+          <tr class="report_result_row">
+            <td class="report_result_column1">&nbsp;Kaliform Bakteri</td>
+            <td class="report_result_column2">0 (250ml)</td>
+          </tr>
+          <tr class="report_result_row">
+            <td class="report_result_column1">&nbsp;Sülfat</td>
+            <td class="report_result_column2">8,35</td>
+          </tr>
+          <tr class="report_result_row">
+            <td class="report_result_column1">&nbsp;Tat - Koku</td>
+            <td class="report_result_column2">Uygun</td>
+          </tr>
+          <tr class="report_result_row">
+            <td class="report_result_column1">&nbsp;Renk - Bulanıklık</td>
+            <td class="report_result_column2">Uygun</td>
+          </tr>
+          <tr class="report_result_row">
+            <td class="report_result_column1">&nbsp;Alüminyum</td>
+            <td class="report_result_column2">Tespit Edilmedi</td>
+          </tr>
+          <tr class="report_result_row">
+            <td class="report_result_column1">&nbsp;Demir</td>
+            <td class="report_result_column2">Tespit Edilmedi</td>
+          </tr>
+          <tr class="report_result_row">
+            <td class="report_result_column1">&nbsp;Oksitlenebilirlik</td>
+            <td class="report_result_column2">Tespit Edilmedi</td>
+          </tr>
+          <tr class="report_result_row">
+            <td class="report_result_column1">&nbsp;İletkenlik</td>
+            <td class="report_result_column2">191 ms</td>
+          </tr>
+          <tr class="report_result_row">
+            <td class="report_result_column1">&nbsp;Nitrit</td>
+            <td class="report_result_column2">Tespit Edilmedi</td>
+          </tr>
+          
+        </table>
+      </center>
           <!--
       <div class="col-md-5">
         <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
@@ -476,12 +595,34 @@ integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+f
 
     <div class="row featurette" style="margin-bottom: 40px;">
       <div class="col-md-12">
-        <h2 class="featurette-heading fw-normal lh-1">İLETİŞİM</h2>
-        
-        <p class="lead">Hayatın vazgeçilmez ihtiyacı olan suyu; sağlıklı bir şekilde üretmek, tarihi birikimimizi geleceğe taşıyarak su kültürünün gelişimine ve yaşam kalitesinin artmasına katkıda bulunmak.
-          Türkiye'deki su sektöründe tekelleşmeyi ve haksız rekabeti önlemektir.
-          <p class="lead"><b>Karlıca Doğal Kaynak Suyu</b> yönetimi <b>Karlıca Doğal Kaynak Suyu</b> Pazarlama Departmanı tarafından yürütülmektedir. 
-            Ulusal ve uluslararası pazarlarda marka değerinin geliştirilmesi temel amacıyla sürdürülen pazarlama politikaları ve bunların bağlı olduğu stratejilere paralel olarak takip edilmektedir.</p> 
+        <h2 class="featurette-heading fw-normal lh-1">
+          <center>
+            <font class="hakkimizda_dot1">●</font><font class="hakkimizda_dot2">●</font><font class="hakkimizda_dot3">● </font> İLETİŞİM 
+            <font class="hakkimizda_dot3">●</font><font class="hakkimizda_dot2">●</font><font class="hakkimizda_dot1">● </font>
+          </center>
+        </h2>
+
+        <p class="lead">
+          <img src="img/icon/adres.png" width="24" height="24" alt=""> Dalgıçlar Otomotiv Petrol Gıda Tekstil Sanayi Ticaret A.Ş. Nusaybin Yolu Eski Kale Mevki İkinci Kilometre / MARDİN
+        </p> 
+
+        <p class="lead">
+          <a href="mailto:info@karlica.com.tr" class="link_button">
+            <img src="img/icon/email.png" width="24" height="24" alt=""> info@karlica.com.tr
+          </a>
+        </p> 
+
+        <p class="lead">
+          <a href="tel:04822121120" class="link_button">
+            <img src="img/icon/phone.png" width="24" height="24" alt=""> 0 (482) 212 11 20
+          </a>
+        </p> 
+
+        <p class="lead">
+          <a href="fax:04822121186" class="link_button">
+            <img src="img/icon/fax.png" width="24" height="24" alt=""> 0 (482) 212 11 86
+          </a>
+        </p> 
        
           </div>
     </div>
@@ -491,10 +632,10 @@ integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+f
       <table class="tablo">
         <tr>
           <td class="tablo_ic">
-            <h2 class="featurette-heading fw-normal lh-1" style="text-align: center; margin-bottom: 0px;"> <img src="google_maps.png" alt="" width="40px" height="40px">GOOGLE MAPS KONUM</h2>
+            <h2 class="featurette-heading fw-normal lh-1" style="text-align: center; margin-bottom: 0px;"> <img src="img/icon/google_maps.png" alt="" width="40px" height="40px"></h2>
           </td>
           <td class="tablo_ic">
-            <h2 class="featurette-heading fw-normal lh-1" style="text-align: center; margin-bottom: 0px;"> <img src="yandex_maps.png" alt="" width="40px" height="40px">YANDEX MAPS KONUM</h2>
+            <h2 class="featurette-heading fw-normal lh-1" style="text-align: center; margin-bottom: 0px;"> <img src="img/icon/yandex_maps.png" alt="" width="40px" height="40px"></h2>
           </td>
         </tr>
         <tr>
@@ -514,26 +655,19 @@ integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+f
 
   </div><!-- /.container -->
 
-
-
-
-
 </main>
-
-
-
-
-
-
-
-
- 
 
 
  <!-- FOOTER 2017–2022-->
  <footer class="container">
-  <p class="float-end"><a href="#">Sayfanın Başına Dön</a></p>
-  <p>&copy;2022 Karlıca Doğal Kaynak Suyu &middot; <a href="#bottom">Gizlilik Sözleşmeleri</a> &middot; <a href="#">KVKK</a></p>
+  <p class="float-end"><a href="#" style="text-decoration: none;">Sayfanın Başına Dön</a></p>
+  <p>&copy;2022 Karlıca Doğal Kaynak Suyu
+    <!--
+    &middot; 
+    -->
+    <!--
+    <a href="#bottom">Gizlilik Sözleşmeleri</a> &middot; <a href="#">KVKK</a></p>
+    -->
 </footer>
 
 
@@ -599,24 +733,24 @@ integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+f
               });
               slider_resize();
           }
-
         }
-
         setInterval(func, 1000);
-
-        
-
-
       });
-
       window.sr = new ScrollReveal();
-
-      sr.reveal('.carousel', {
-        delay: 1000
-      });
-
-      
+      if (screen.width > 767) {
+        sr.reveal('.col-lg-4', {
+          rotate: {
+            x: 20,
+            y: 20
+          }
+        });
+        sr.reveal('.bizkimiz, .vizyonumuz, .misyonumuz, .carousel, .report_result, .maps_class, .col-lg-4', {
+          easing: 'ease-in'
+        });
+      }
     </script>
   </body>
 </html>
-
+<!--
+  CREATING BY AHMET MUNGAN -> https://www.github.com/ahmetmungan
+-->
